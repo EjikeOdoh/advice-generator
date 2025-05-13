@@ -1,0 +1,79 @@
+:root {
+    --Blue-200: hsl(193, 38%, 86%);
+    --Green-300: hsl(150, 100%, 66%);
+    --Blue-600: hsl(217, 19%, 38%);
+    --Blue-900: hsl(217, 19%, 24%);
+    --Blue-950: hsl(218, 23%, 16%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background-color: var(--Blue-950);
+}
+
+.card {
+    width: 38rem;
+    text-align: center;
+    display: grid;
+    gap: 30px;
+    background-color: var(--Blue-900);
+    position: relative;
+    padding: 40px 40px 80px;
+    border-radius: 20px;
+}
+
+.card h3 {
+    color: var(--Green-300);
+    letter-spacing: 5px;
+}
+
+.card h1 {
+    color:var(--Blue-200);
+    font-weight: 800;
+}
+
+.card button {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    border-radius: 50%;
+    background-color: var(--Green-300);
+    border: none;
+    transition: all 0.3s linear;
+}
+
+.card button:hover {
+    cursor: pointer;
+    box-shadow: 0 0 50px 4px var(--Green-300);
+}
+
+@media (max-width: 40rem) {
+
+    body {
+        padding: 20px;
+    }
+
+    .card{
+        width: 100%;
+    }
+}
